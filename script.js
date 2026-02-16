@@ -4,6 +4,7 @@ function showDetail(name) {
     aman: "Aman dikenal sebagai sosok yang tenang dan suka membantu, hobby main voly.",
     adit: "Adit adalah seseorang yang menjalani dua profesi yaitu mekanik honda king dan barbershop, fans dodo.",
     fahmi: "Fahmi adalah pribadi yang kreatif dan penuh semangat, fans messi.",
+    arif: "Arif adalah pribadi yang berasal dari gajah mada, berani mengambil keputusan, dan selalu siap membantu anda mencari link gacor.",
     genta: "genta adalah pribadi yang kreatif dan hobby dibidang pramuka.",
     helky: "Helky dikenal sebagai sosok yang tegas dan pekerja keras, hobby main voly.",
     ridho: "Ridho adalah pribadi yang sabar dan bijaksana, striker asal belanda.",
