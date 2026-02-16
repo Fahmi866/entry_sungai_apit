@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Entry Sungai Apit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="overlay">
+    <h1 class="main-title">ENTRY SUNGAI APIT</h1>
+    <p class="subtitle">TIM YANG BERANI, BENAR, DAN BERHASIL</p>
+
+    <div class="container">
+      <div class="name" onclick="showDetail('asril')">Asril</div>
+      <div class="name" onclick="showDetail('aman')">Aman</div>
+      <div class="name" onclick="showDetail('adit')">Adit</div>
+      <div class="name" onclick="showDetail('fahmi')">Fahmi</div>
+      <div class="name" onclick="showDetail('genta')">Genta</div>
+      <div class="name" onclick="showDetail('helky')">Helky</div>
+      <div class="name" onclick="showDetail('ridho')">Ridho</div>
+      <div class="name" onclick="showDetail('ravi')">Ravi</div>
+      <div class="name" onclick="showDetail('zulfan')">Zulfan</div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <span class="close" onclick="closeModal()">×</span>
+      <p id="detailText"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

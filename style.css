@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-image: url("background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================
+   EFFECT CAHAYA PINGGIR
+========================= */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow:
+    inset 0 0 150px rgba(0, 234, 255, 0.4),
+    inset 0 0 300px rgba(0, 234, 255, 0.3);
+}
+
+/* =========================
+   OVERLAY
+========================= */
+.overlay {
+  background: rgba(0, 0, 0, 0.65);
+  height: 100vh;
+  color: white;
+  text-align: center;
+  padding-top: 80px;
+}
+
+/* =========================
+   JUDUL FLOATING PREMIUM
+========================= */
+.main-title {
+  font-size: 70px;
+  font-weight: 900;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #e9eff0;
+
+  text-shadow:
+    0 0 10px rgba(0, 234, 255, 0.9),
+    0 0 20px rgba(0, 234, 255, 0.8),
+    0 0 40px rgba(0, 234, 255, 0.6);
+
+  animation: floatTitle 3s ease-in-out infinite alternate;
+}
+
+/* Efek mengapung */
+@keyframes floatTitle {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-12px); }
+}
+
+/* =========================
+   SUBTITLE
+========================= */
+.subtitle {
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: white;
+  opacity: 0.9;
+  margin-bottom: 60px; /* Jarak ke nama */
+}
+
+/* =========================
+   CONTAINER NAMA
+========================= */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* CARD NAMA */
+.name {
+  background: white;
+  color: black;
+  padding: 15px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.name:hover {
+  background: gold;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px gold;
+}
+
+/* =========================
+   MODAL
+========================= */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  color: black;
+  padding: 35px;
+  border-radius: 15px;
+  width: 340px;
+  position: relative;
+  animation: popup 0.3s ease;
+  text-align: center;
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* =========================
+   TEKS MODAL ESTETIK
+========================= */
+#detailText {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.8;
+  letter-spacing: 1px;
+  color: #111;
+  text-shadow: 0 0 8px rgba(0,0,0,0.3);
+  animation: textMove 2s ease-in-out infinite alternate;
+}
+
+/* Gerak naik turun halus */
+@keyframes textMove {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-8px); }
+}
